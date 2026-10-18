@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello GitHub Pages</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --card: #141b34;
+    --text: #e8ecf8;
+    --muted: #9aa6c8;
+    --accent: #5b8cff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f4f6fc; --card: #ffffff; --text: #151a2e; --muted: #5d6685; --accent: #2f5fe0; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard", -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+  }
+  main {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
+  }
+  h1 { margin: 0 0 8px; font-size: 1.8rem; }
+  p { margin: 0 0 24px; color: var(--muted); line-height: 1.6; }
+  button {
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    cursor: pointer;
+  }
+  button:hover { filter: brightness(1.1); }
+  #count { margin-top: 20px; font-size: 2.4rem; font-weight: 700; color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>👋 안녕하세요, GitHub Pages!</h1>
+  <p>이 페이지는 GitHub 저장소의 <code>index.html</code> 하나로 배포되었습니다.</p>
+  <button id="btn" type="button">클릭해 보세요</button>
+  <div id="count">0</div>
+</main>
+<script>
+  let n = 0;
+  const count = document.getElementById('count');
+  document.getElementById('btn').addEventListener('click', () => { count.textContent = ++n; });
+</script>
+</body>
+</html>
